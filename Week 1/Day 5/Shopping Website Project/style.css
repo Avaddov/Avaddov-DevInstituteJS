@@ -1,0 +1,47 @@
+nav{
+    background-color: rgb(79, 79, 79);
+    height: 50px;
+
+}
+
+i {
+    
+    color: rgb(255, 211, 90);
+    position: absolute;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+li {
+    float: right;
+    color: white;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: rgb(157, 157, 157);
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(79, 79, 79);
+    color: white;
+    text-align: center;
+  }
