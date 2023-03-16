@@ -1,0 +1,9 @@
+.cat {
+    display: flex;
+    justify-content: center;
+}
+
+.lion {
+    display: flex;
+    justify-content: center;
+}
