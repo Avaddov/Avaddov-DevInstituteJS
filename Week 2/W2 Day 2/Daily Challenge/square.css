@@ -1,0 +1,35 @@
+
+body{
+  display: grid;
+  grid-template-areas: 'a b c';
+  grid-template-columns: 10% 20% 10% auto;
+}
+
+.box{
+    min-height: 50px; 
+    width: 50px; 
+    background-color: yellow; 
+    margin-top:10px;
+    border: black solid 2px;
+  }
+
+ .a{
+  grid-area: a; 
+  min-height: 100px; 
+  text-align: center;
+ }
+
+.b{
+  grid-area: b; 
+  min-height: 100px; 
+  text-align: center;
+
+}
+
+.c{
+  grid-area: c; 
+  min-height: 100px; 
+  text-align: center;
+
+} 
+

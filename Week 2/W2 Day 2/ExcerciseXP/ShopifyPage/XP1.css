@@ -1,0 +1,97 @@
+body {
+  background-image: url("holiday.jpeg");
+  font-family: sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+}
+
+.stats {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.stats h2 {
+  color: slateblue;
+  font-size: 3rem;
+}
+
+section {
+  height: 300px;
+  width: 100%;
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review {
+  display: flex;
+  flex-basis: 30%;
+  flex-grow: 1;
+  margin: 1rem;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
+.review p {
+  margin: 0;
+  padding: 1.5rem 1rem 2.5rem;
+  background-color: white;
+  color: #333333;
+  border-radius: 5%;
+
+}
+
+.review .pfp {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review img {
+  border-radius: 50%;
+  height: 4rem;
+  position: absolute;
+}
+
+.review .info{
+    padding: 2.5rem 1rem 1.5rem;
+    color: white;
+    text-align: center;
+    
+}
+
+.review .info h3, 
+.review .info h6{
+    margin: 0;
+
+}
+
+.review1 {
+  background-color: indianred;
+ align-self: flex-start;
+ border-radius: 3%;
+}
+
+.review2 {
+  background-color: slateblue;
+  align-self: flex-end;
+  border-radius: 3%;
+}
+
+.review3 {
+  background-color: teal;
+  border-radius: 3%;
+}

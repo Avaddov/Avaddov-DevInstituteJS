@@ -1,0 +1,11 @@
+.box{
+    min-height: 50px; 
+    width: 50px; 
+    background-color: yellow; 
+    margin-top:10px;
+    margin-left: 10px;
+    border: black solid 2px;
+
+  }
+
+  .inline{display: inline-block};
