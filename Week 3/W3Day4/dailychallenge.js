@@ -1,8 +1,8 @@
 // // Daily Challenge : Not Bad
 
-sentence = "God of war is not a bad game";
-wordNot = sentence.indexOf("not");
-wordBad = sentence.indexOf("bad");
+let sentence = "God of war is not a bad game";
+let wordNot = sentence.indexOf("not");
+let wordBad = sentence.indexOf("bad");
 
 if (wordNot > 0 && wordBad > 0 && wordBad > wordNot)
   sentence =
