@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiple Event Listeners Example</title>
+	<style>
+		#element {
+			width: 200px;
+			height: 100px;
+			background-color: red;
+			color: white;
+			text-align: center;
+			font-size: 24px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<div id="element">Click me!</div>
+	<script>
+		const element = document.getElementById('element');
+		
+		// Click event listener
+		element.addEventListener('click', () => {
+			element.style.backgroundColor = 'blue';
+			element.style.color = 'yellow';
+			element.style.fontSize = '32px';
+		});
+
+		// Mouseover event listener
+		element.addEventListener('mouseover', () => {
+			element.style.left = '30%';
+		});
+
+		// Mouseout event listener
+		element.addEventListener('mouseout', () => {
+			element.style.left = '50%';
+		});
+
+		// Double click event listener
+		element.addEventListener('dblclick', () => {
+			element.style.backgroundColor = 'green';
+			element.style.color = 'black';
+			element.style.fontSize = '20px';
+		});
+	</script>
+</body>
+</html>
