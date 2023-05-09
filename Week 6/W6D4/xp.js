@@ -75,3 +75,8 @@
   // Add the userDiv to the navbar
   navbar.appendChild(userDiv);
 })('John');
+
+
+
+
+
