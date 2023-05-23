@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+
+<html>
+<head>
+    <title>Sunrise Time</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Sunrise Time</h1>
+    <form id="cityForm">
+        <label for="city1Lat">City 1 Latitude:</label>
+        <input type="text" id="city1Lat" required>
+        <label for="city1Lng">City 1 Longitude:</label>
+        <input type="text" id="city1Lng" required>
+        <label for="city2Lat">City 2 Latitude:</label>
+        <input type="text" id="city2Lat" required>
+        <label for="city2Lng">City 2 Longitude:</label>
+        <input type="text" id="city2Lng" required>
+        <button type="submit">Get Sunrise Time</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Function to retrieve sunrise time for a city
+            function getSunriseTime(lat, lng) {
+                var url = `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`;
+                return new Promise(function(resolve, reject) {
+                    $.ajax({
+                        url: url,
+                        method: "GET",
+                        success: function(response) {
+                            var sunriseTime = response.results.sunrise;
+                            resolve(sunriseTime);
+                        },
+                        error: function(error) {
+                            reject(error);
+                        }
+                    });
+                });
+            }
+
+            // Form submission event handler
+            $("#cityForm").submit(function(event) {
+                event.preventDefault();
+                
+                var city1Lat = $("#city1Lat").val();
+                var city1Lng = $("#city1Lng").val();
+                var city2Lat = $("#city2Lat").val();
+                var city2Lng = $("#city2Lng").val();
+                
+                // Retrieve sunrise time for both cities using Promise.all
+                Promise.all([
+                    getSunriseTime(city1Lat, city1Lng),
+                    getSunriseTime(city2Lat, city2Lng)
+                ]).then(function(sunriseTimes) {
+                    var city1Sunrise = sunriseTimes[0];
+                    var city2Sunrise = sunriseTimes[1];
+                    
+                    // Display sunrise times
+                    $("#result").html(`<p>Sunrise time for City 1: ${city1Sunrise}</p><p>Sunrise time for City 2: ${city2Sunrise}</p>`);
+                }).catch(function(error) {
+                    $("#result").html(`<p>Error retrieving sunrise times: ${error}</p>`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
